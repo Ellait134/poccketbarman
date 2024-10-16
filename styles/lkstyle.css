@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #272727;
+}
+
+.registration {
+  display: flex;
+  justify-content: center;
+  color: #CACACA;
+}
+.registration_list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: #000000;
+  margin: 0 auto;
+  margin-top: 163px;
+  width: 510px;
+  height: 350px;
+  border-radius: 50px;
+  align-items: center;
+}
+.registration_heading {
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 44px;
+}
+.registration_input {
+  width: 389px;
+  height: 50px;
+  background: #272727;
+  border-radius: 20px;
+  border: none;
+  margin-top: 20px;
+  padding-left: 31px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #B0B0B0;
+}
+.registration_btn {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  background: #626262;
+  border-radius: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+.registration_regbtn {
+  margin-top: 10px;
+}
+.registration_btn:hover {
+  background: #E6EDDF;
+}
+
+.main {
+  background: url(../img/lkerrorcoci.png) no-repeat;
+  height: 610px;
+  background-position: right;
+}/*# sourceMappingURL=lkstyle.css.map */

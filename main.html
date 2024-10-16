@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карманный бармен</title>
+    <link rel="stylesheet" href="./styles/mainstyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="body" onLoad="CustomConfirm.show(goBack);" style="overflow-y: hidden;">
+    <div id="freezeLayer" class="freeze_layer" style="display:none"></div>
+    <div id="dialogCont" class="dlg_container">
+        <div class="dlg_header">
+            <img class="dlg_img" src="./img/logo.png" alt="Logo">
+        </div>
+        <div class="dlg_body">
+            <p class="dlg_text">Контент этого сайта предназначен для пользователей старше 18 лет.
+                Вам уже есть 18?</p>
+        </div>
+        <div class="dlg_footer">
+            <button onclick="CustomConfirm.okay()">Да</button>
+            <button onclick="CustomConfirm.close()">Нет</button>
+        </div>
+    </div>
+
+    <div id="dialogCont1" class="dlg1_container1">
+        <div class="dlg1_header1">
+            <img class="dlg1_img1" src="./img/logo.png" alt="Logo">
+        </div>
+        <div class="dlg1_body1">
+            <h2 class="dlg1_heading1">Спасибо за честный ответ</h2>
+            <p class="dlg1_text1">Мы заботимся о здоровье будущего поколения,
+                поэтому не демонстрируем алкоголь лицам младше 18 лет.</p>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container header_wrapper">
+
+            <section class="header_logo">
+                <a href="main.html"><img src="./img/logo.png" alt="Logo"></a>
+                <a class="header_heading" href="main.html">Карманный бармен</a>
+            </section>
+
+            <nav class="header_nav">
+                <ul class="header_list">
+                    <li>
+                        <a href="#!"><img class="header_burger_icon" src="./img/menu.svg" alt="BurgMenu"></a>
+                        <ul class="header_burger_list">
+                            <li class="header_burger_item1">
+                                <a class="header_burger_link header_hbl" href="#!">По времени употребления</a>
+                            </li>
+                            <li class="header_burger_item2">
+                                <a class="header_burger_link" href="#">Аперитивы</a>
+                            </li>
+                            <li class="header_burger_item2">
+                                <a class="header_burger_link" href="#">Дижестивы</a>
+                            </li>
+                            <li class="header_burger_item1">
+                                <a class="header_burger_link header_hbl" href="#!">По размеру порции и
+                                    крепости</a>
+                            </li>
+                            <li class="header_burger_item2">
+                                <a class="header_burger_link" href="#">Hot Drinks</a>
+                            </li>
+                            <li class="header_burger_item2">
+                                <a class="header_burger_link" href="#">Long Drinks</a>
+                            </li>
+                            <li class="header_burger_item2">
+                                <a class="header_burger_link" href="#">Short Drinks</a>
+                            </li>
+                            <li class="header_burger_item2">
+                                <a class="header_burger_link" href="#">Shot Drinks</a>
+                            </li>
+                            <li class="header_burger_item1">
+                                <a class="header_burger_link header_hbl" href="#!">По вкусовым качествам</a>
+                            </li>
+                            <div class="header_burger_flex">
+                                <div class="header_burger_flex_left">
+                                    <li class="header_burger_item2">
+                                        <a class="header_burger_link" href="#">Коллинзы</a>
+                                    </li>
+                                    <li class="header_burger_item2">
+                                        <a class="header_burger_link" href="#">Дэйзи</a>
+                                    </li>
+                                    <li class="header_burger_item2">
+                                        <a class="header_burger_link" href="#">Коблеры и кулеры</a>
+                                    </li>
+                                    <li class="header_burger_item2">
+                                        <a class="header_burger_link" href="#">Сауэры </a>
+                                    </li>
+                                </div>
+                                <div class="header_burger_flex_right">
+                                    <li class="header_burger_item2">
+                                        <a class="header_burger_link" href="#">Свизлы</a>
+                                    </li>
+                                    <li class="header_burger_item2">
+                                        <a class="header_burger_link" href="#">Слинги</a>
+                                    </li>
+                                    <li class="header_burger_item2">
+                                        <a class="header_burger_link" href="#">Физзы</a>
+                                    </li>
+                                    <li class="header_burger_item2">
+                                        <a class="header_burger_link" href="#">Фикс</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <li class="header_burger_item1">
+                                <a class="header_burger_link header_hbl" href="#!">Другие интересные виды коктейлей</a>
+                            </li>
+                            <li class="header_burger_item2">
+                                <a class="header_burger_link" href="#">Слоистые коктейли</a>
+                            </li>
+                            <li class="header_burger_item2">
+                                <a class="header_burger_link" href="#">Сангари</a>
+                            </li>
+                            <li class="header_burger_item2 header_bi2space">
+                                <a class="header_burger_link" href="#">Джулеп</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input class="header_search_input" type="text" placeholder="Search">
+                    </li>
+                    <li>
+                        <img class="header_glass" src="./img/search.svg" alt="Search">
+                    </li>
+                    <li>
+                        <a href="lk.html" target="_blank"><img class="header_avatar" src="./img/lk.svg" alt="Icon"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div id="scrollTop" class="isShowBtn isShowBtn_hide">
+            <div class="container">
+                <img width="40" height="40" src="./img/up-arrow.svg" alt="scrollTop">
+            </div>
+        </div>
+
+        <section class="onwebsite">
+            <div class="container onwebsite_content">
+                <p class="onwebsite_text">На этом сайте вы можете найти рецепты разных алкогольных коктейлей и
+                    приготовить
+                    их даже в домашних условиях</p>
+            </div>
+        </section>
+
+        <section class="coctails">
+            <div class="container">
+                <div class="coctails_menu">
+                    <div class="sidebar">
+                        <ul class="sidebar_list">
+                            <li class="sidebar_item1">
+                                Сложность
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"><input disabled="disabled" type="checkbox"
+                                        name="complexity" id="">
+                                    низкая</label>
+
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"><input disabled="disabled" type="checkbox"
+                                        name="complexity" id="">
+                                    средняя</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"><input disabled="disabled" type="checkbox"
+                                        name="complexity" id="">
+                                    высокая</label>
+                            </li>
+                            <li class="sidebar_item1">
+                                Ингридиенты
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"><input value="vodka" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="vodka"> водка</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"><input value="gin" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="gin"> джин</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"> <input value="rom" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="rom"> ром</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"> <input value="liquor" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="liquor"> ликер</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"> <input value="viski" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="viski"> виски</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"><input value="tequila" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="tequila"> текила</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"> <input value="tonic" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="tonic"> тоник</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"> <input value="bitter" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="bitter"> биттер</label>
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"><input value="vermyt" class="checkbox" type="checkbox"
+                                        name="Ingredients" id="vermyt"> вермут</label>
+                            </li>
+
+                            <li class="sidebar_item1">
+                                Шейкер
+                            </li>
+                            <li class="sidebar_item2">
+                                <label class="sidebar_label"><input disabled="disabled" type="checkbox"
+                                        name="Ingredients" id="">
+                                    шейкер</label>
+                            </li>
+                        </ul>
+                        <button class="sidebar_btn sidebar_btn1">показать</button>
+                        <button class="sidebar_btn sidebar_btn2">сбросить</button>
+                    </div>
+                    <div class="coctails_products">
+                        <div class="coctails_sort">
+                            <p class="coctails_sort_text">Сортировать по:</p>
+                            <button class="coctails_sort_btn">Популярности</button>
+                            <button class="coctails_sort_btn">Рейтингу</button>
+                            <button class="coctails_sort_btn">Крепости</button>
+                        </div>
+
+                        <div class="coctails_colums">
+                            <div class="coctails_colum1">
+
+                                <div class="coctails_card vodka liquor">
+                                    <a href="harvi.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Харви Волбенгер</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/harvi.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: водка, ликер, апельсиновый сорбет,
+                                        апельсин, лед</p>
+                                </div>
+
+                                <div class="coctails_card vodka liquor">
+                                    <a href="whiterus.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Белый русский</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/whiterus.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: водка, ликер, сливки,
+                                        лед</p>
+                                </div>
+
+                                <div class="coctails_card viski">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Виски-кола</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/viskicola.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: виски, кола, лед</p>
+                                </div>
+
+                                <div class="coctails_card tequila bitter">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading coctails_card_2lineheading">Джонни Сильверхенд
+                                        </h3>
+                                        <img class="coctails_card_img2line" src="./img/coctails/jonnysilver.svg"
+                                            alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: текила, биттер, сироп агавы, темное пиво
+                                    </p>
+                                </div>
+
+                                <div class="coctails_card rom">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Кайпиринья</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/kaypi.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: ром, лайм, тростниковый сахар, лед</p>
+                                </div>
+                            </div>
+
+                            <div class="coctails_colum2">
+
+                                <div class="coctails_card rom liquor">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Зомби</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/zombi.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: 3 вида рома, 2 вида
+                                        ликера, гренадин, ананасовый и апельсиновый
+                                        сок, лед, апельсин, вишня</p>
+                                </div>
+
+                                <div class="coctails_card vodka liquor">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Блинк-блинк</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/blink.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: водка, ликер, вино, лайм, малина, лед</p>
+                                </div>
+
+                                <div class="coctails_card vodka liquor">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Голубая лагуна</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/bluelag.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: ликер, водка, спрайт, лимон, лед</p>
+                                </div>
+
+                                <div class="coctails_card vodka liquor">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Доктор Кто</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/docwho.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: водка, ликер, апельсиновый сок, лед</p>
+                                </div>
+
+                                <div class="coctails_card vodka liquor">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Космополитен</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/cosmopol.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: водка, ликер, сок лайма, клюквенный сок
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="coctails_colum3">
+
+                                <div class="coctails_card liquor">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Б-52</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/b52.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: кофейный ликер, сливочный ликер,
+                                        апельсиновый ликер</p>
+                                </div>
+
+                                <div class="coctails_card rom">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading coctails_card_2lineheading ">Бог войны (Кратос)
+                                        </h3>
+                                        <img class="coctails_card_img2line" src="./img/coctails/kratos.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: ванильный ром, клубничный ром, амаретто,
+                                        энергетик, клубличный сироп, молоко</p>
+                                </div>
+
+                                <div class="coctails_card rom">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Дайкири</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/daikiri.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: белый ром, сок лайма(лимона), сахар, лед
+                                    </p>
+                                </div>
+
+                                <div class="coctails_card vodka">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Ёрш</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/ersh.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: светлое пиво, водка</p>
+                                </div>
+
+                                <div class="coctails_card vodka">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Кровавая Мэри</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/bloodmary.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: томатный сок, водка, лимонный сок, соль,
+                                        перец, сельдерей, острый соус</p>
+                                </div>
+                            </div>
+
+                            <div class="coctails_colum4">
+
+                                <div class="coctails_card liquor">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Банши</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/banshi.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: какао ликер, банановый ликер, сливки, лед
+                                    </p>
+                                </div>
+
+                                <div class="coctails_card rom bitter">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Большой Дик</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/bigdick.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: 3 вида рома, виски, херес, 2 вида
+                                        биттера, сироп, лаймовый сок, лимон, лепестки роз, масло какао, орех, лед</p>
+                                </div>
+
+                                <div class="coctails_card gin tonic">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Джин тоник</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/jinton.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: джин, тоник, лайм, лед</p>
+                                </div>
+
+                                <div class="coctails_card viski">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Ирландский кофе</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/irlandcoffe.svg" alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: кофе, ирландский виски, взбитые сливки,
+                                        тростниковый сахар</p>
+                                </div>
+
+                                <div class="coctails_card viski vermyt">
+                                    <a href="error.html" class="coctails_cardlink" target="_blank">
+                                        <h3 class="coctails_card_heading">Кровь и песок</h3>
+                                        <img class="coctails_card_img" src="./img/coctails/bloodandsand.svg"
+                                            alt="photo">
+                                    </a>
+                                    <ul class="coctails_rating" data-total-value="0">
+                                        <li class="coctails_rating_item" data-item-value="5">★</li>
+                                        <li class="coctails_rating_item" data-item-value="4">★</li>
+                                        <li class="coctails_rating_item" data-item-value="3">★</li>
+                                        <li class="coctails_rating_item" data-item-value="2">★</li>
+                                        <li class="coctails_rating_item" data-item-value="1">★</li>
+                                    </ul>
+                                    <p class="coctails_card_text">Ингредиенты: виски, вермут, ликер, апельсиновый сок,
+                                        лед</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer_content">
+            <p class="footer_text">All rights reserved &copy</p>
+        </div>
+    </footer>
+
+    <script src="./js/filtration.js"></script>
+    <script src="./js/scrollTop.js"></script>
+    <script src="./js/rating.js"></script>
+    <script src="./js/confirm.js"></script>
+</body>
+
+</html>
